@@ -3,8 +3,9 @@ import mongoose from "mongoose";
 
 export const connectDb= ()=>{ mongoose.connect(process.env.MONGO_URI,{
 dbName:"Apibackend" 
-}).then(()=>{
-  console.log("data base connected")})
+}).then((c)=>{
+  console.log(`data base connected with ${c.connection.host}`)})
 .catch((e)=>{
   console.log(e);
 }) }
+

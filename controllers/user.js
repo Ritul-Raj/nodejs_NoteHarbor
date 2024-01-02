@@ -18,13 +18,8 @@ if(!user){
     return next(new ErrorHandler("invalid Email or password",404));
 }
 
-const ismatch= bcrypt.compare(password,user.password);
+const ismatch= await bcrypt.compare(password,user.password);
 
-// if(!ismatch) {
-//     return res.json({
-//         success:false
-//     });
-// }
 
 if(!ismatch){
     return next(new ErrorHandler("invalid Email or password",404));
