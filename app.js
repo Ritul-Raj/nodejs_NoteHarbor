@@ -40,6 +40,10 @@ app.get("/ritul",(req,res)=>{
     res.send("nice ritul")
    }) 
 
+   app.post("/ritulpost",(req,res)=>{
+    res.send("nice ritul")
+   }) 
+
 console.log(process.env.PORT)
 const port=process.env.PORT;
 app.listen(port,()=>{ 
