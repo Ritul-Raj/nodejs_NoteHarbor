@@ -31,7 +31,7 @@ app.use("/api/v1/task",taskrouter);
 //using error middleware
 app.use(errorMiddleware)
 
-connectDb( );
+connectDb();
 
 app.get("/",(req,res)=>{
  res.send("nice")
