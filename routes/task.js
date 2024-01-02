@@ -5,7 +5,7 @@ const router =express.Router();
 
 router.post("/new",isAuthenticated,newTask)
 
-router.post("/my",isAuthenticated,getmytask)
+router.get("/my",isAuthenticated,getmytask)
 
 router.route("/:id").put(isAuthenticated,updatetask).delete(isAuthenticated,deletetask);
 
