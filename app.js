@@ -36,6 +36,9 @@ connectDb();
 app.get("/",(req,res)=>{
  res.send("nice")
 }) 
+app.get("/ritul",(req,res)=>{
+    res.send("nice ritul")
+   }) 
 
 console.log(process.env.PORT)
 const port=process.env.PORT;
