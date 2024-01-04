@@ -25,7 +25,7 @@ if(!ismatch){
     return next(new ErrorHandler("invalid Email or password",404));
 }
 
-   setcookie(user,res,`Welcome Back,${user.name}`,200)
+   setcookie(user,res,` Welcome Back , ${user.name} `,200)
 } 
 catch (error) {
     next(error)
