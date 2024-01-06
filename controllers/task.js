@@ -14,7 +14,7 @@ await Task.create({
 })
 res.status(201).json({
     success:true,
-    message:"task added Sucessfully"
+    message:"Task Added Sucessfully"
 })
     } 
     catch (error) {
@@ -76,7 +76,7 @@ if(!task){
       await task.deleteOne();
       res.status(200).json({
           success:true,
-          message:"task deleted"
+          message:"Task Deleted"
       })
     } 
     catch (error) {
