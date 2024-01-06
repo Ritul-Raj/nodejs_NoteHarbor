@@ -7,7 +7,7 @@ export const setcookie = (user,res,message,statuscode)=>{
     
     res.cookie("token",token,{
        httpOnly : true,
-      maxAge:15*60*1000 ,
+      maxAge:30*60*1000 ,
       sameSite:process.env.NODE_ENV==="Development" ? "lax":"none",
       secure:process.env.NODE_ENV==="Development" ?false:true 
     }
