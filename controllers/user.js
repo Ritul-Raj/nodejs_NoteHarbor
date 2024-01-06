@@ -15,17 +15,17 @@ let user =await User.findOne({email}).select("+password"); // select + password 
 
 
 if(!user){
-    return next(new ErrorHandler("invalid Email or password",404));
+    return next(new ErrorHandler("Invalid Email or Password",404));
 }
 
 const ismatch= await bcrypt.compare(password,user.password);
 
 
 if(!ismatch){
-    return next(new ErrorHandler("invalid Email or password",404));
+    return next(new ErrorHandler("Invalid Email or Password",404));
 }
 
-   setcookie(user,res,` Welcome Back , ${user.name} `,200)
+   setcookie(user,res,` Welcome Back ,${user.name} `,200)
 } 
 catch (error) {
     next(error)
@@ -40,7 +40,7 @@ try {
     
     
     if(user){
-        return next(new ErrorHandler("user already exist",404));
+        return next(new ErrorHandler("User Already Exist",404));
     }
     
     
@@ -48,7 +48,7 @@ try {
     user=await User.create({
         name,email, password:hassedpassword
       } ) 
-    setcookie(user,res,"registered successfully",201) 
+    setcookie(user,res,"Registered Successfully",201) 
 } 
 catch (error) {
     next(error)
